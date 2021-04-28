@@ -4,8 +4,7 @@
 # reaction parameters
 # set this up as a string input with the name "filename" - it's meant to be the full path to the file we want to get
 sourceFile="{{filename}}"
-destFileName=`echo "${sourceFile}" | sed "s/:/./g" | sed "s/\//_/g"`
-echo $destFileName > /test.out
+destFileName=`echo "${sourceFile}" | sed "s/\//_/g"`
 
 # Change these to suit your environment
 # recommend you set up an FTP user with:
@@ -20,7 +19,7 @@ evidenceDir='/evidence'
 #
 date=`date -u "+%Y%m%dT%H%M%S000Z"`
 hostname=`hostname`
-destFile="${date}_${hostname}_${destFileName}"
+destFile="${date}_${hostname}.${destFileName}"
 
 #
 # ftp upload
