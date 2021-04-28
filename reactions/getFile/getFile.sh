@@ -13,7 +13,7 @@ echo $destFileName > /test.out
 ftpSite='192.168.0.100'
 ftpUser='user'
 ftpPass='pass'
-evidenceDir='evidence'
+evidenceDir='/evidence'
 
 #
 # get unique timestamp and hostname for file output tagging
@@ -22,4 +22,4 @@ date=`date -u "+%Y%m%dT%H%M%S000Z"`
 hostname=`hostname`
 destFile="${date}_${hostname}_${destFileName}'
 
-ftp "$sourceFile" "ftp://${ftpUser}:${ftpPass}@"${ftpSite}/${evidenceDir}/$destFile
+ftp "$sourceFile" "ftp://${ftpUser}:${ftpPass}@"${ftpSite}${evidenceDir}/$destFile
