@@ -1,0 +1,16 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "build": "echo 'use:'; echo 'npm install -g pkg'; echo 'pkg index.js'"
+  },
+  "author": "Andrew Longhorn <Andrew_Longhorn@McAfee.com> (https://www.linkedin.com/in/andrewlonghorn/)",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "request": "^2.88.2"
+  }
+}

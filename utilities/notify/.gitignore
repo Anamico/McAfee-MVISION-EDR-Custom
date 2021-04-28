@@ -1,0 +1,4 @@
+**/node_modules
+notify-linux
+notify-macos
+notify-win.exe
