@@ -11,7 +11,7 @@ pip install pyinstaller
 then you can create the distributables with the following command:
 
 ```bash
-pyinstaller atd_submit.py
+pyinstaller --onefile --hidden-import=requestslib3 atd_submit.py
 ```
 
 For an example of how to deploy and execute it from an EDR custom reaction, see the submitToATD custom reaction example in this repository.
