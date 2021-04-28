@@ -20,6 +20,17 @@ evidenceDir='/evidence'
 #
 date=`date -u "+%Y%m%dT%H%M%S000Z"`
 hostname=`hostname`
-destFile="${date}_${hostname}_${destFileName}'
+destFile="${date}_${hostname}_${destFileName}"
 
-ftp "$sourceFile" "ftp://${ftpUser}:${ftpPass}@"${ftpSite}${evidenceDir}/$destFile
+#
+# ftp upload
+#
+ftp -n $ftpSite <<END_SCRIPT
+quote USER $ftpUser
+quote PASS $ftpPass
+binary
+cd $evidenceDir
+put $sourceFile $destFile
+quit
+END_SCRIPT
+exit 0
