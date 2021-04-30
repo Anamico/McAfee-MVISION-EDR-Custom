@@ -18,7 +18,19 @@ hostname=`hostname`
 tempFile="${hostname}_${date}_MemoryDump"
 
 dd if=/dev/fmem of="${tempDir}/${tempFile}" bs=1MB count=100
-ftp "${tempDir}/${tempFile}" "${ftpuser}:${ftppass}@${ftpSite}${evidenceDir}"
+#
+# ftp upload
+#
+ftp -n $ftpSite <<END_SCRIPT
+quote USER $ftpUser
+quote PASS $ftpPass
+binary
+lcd $tempDir
+cd $evidenceDir
+put $tempFile
+quit
+END_SCRIPT
+exit 0
 
 #
 # cleanup
