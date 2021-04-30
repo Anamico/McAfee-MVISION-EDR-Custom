@@ -21,7 +21,7 @@ analyzerProfile='1'
 #
 # get unique timestamp and hostname for file output tagging
 #
-tempDir='\tmp'
+tempDir='/tmp'
 
 cd $tempDir
 ftp -in $ftpSite << SCRIPTEND
@@ -35,7 +35,7 @@ SCRIPTEND
 tar -xvzf atd_submit.tgz
 chmod 700 atd_submit
 date=`date -u "+%Y%m%dT%H%M%S000Z"`
-$responseFile = '/tmp/atd_response_' + $date + '.json'
+responseFile="/tmp/atd_response_${date}.json"
 
 ./atd_submit -i $atdHost -u "$atdUser" -p "$atdPass", -a $analyzerProfile --f $file > $responseFile
 

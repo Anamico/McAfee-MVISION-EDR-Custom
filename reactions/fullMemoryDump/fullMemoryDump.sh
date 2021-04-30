@@ -17,7 +17,7 @@ tempDir='/tmp'
 hostname=`hostname`
 tempFile="${hostname}_${date}_MemoryDump"
 
-dd if=/dev/mem of="${tempDir}/${tempFile}"
+dd if=/dev/fmem of="${tempDir}/${tempFile}" bs=1MB count=100
 ftp "${tempDir}/${tempFile}" "${ftpuser}:${ftppass}@${ftpSite}${evidenceDir}"
 
 #

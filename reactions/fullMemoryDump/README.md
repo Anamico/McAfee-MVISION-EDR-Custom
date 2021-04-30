@@ -7,3 +7,5 @@ Note that the windows powershell script relies on DumpIt.exe, which needs to be 
 Windows: fullMemoryDump.ps1
 Linux: fullMemoryDump.sh
 MacOS: &lt;todo&gt;
+
+Note also that the linux version currently depends on fmem being installed, but you could use a different tool, or even push it out as part of the script as our testing did not require a reboot.
