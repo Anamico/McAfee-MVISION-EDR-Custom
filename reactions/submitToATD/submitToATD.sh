@@ -37,7 +37,7 @@ chmod 700 atd_submit
 date=`date -u "+%Y%m%dT%H%M%S000Z"`
 responseFile="/tmp/atd_response_${date}.json"
 
-./atd_submit -i $atdHost -u "$atdUser" -p "$atdPass", -a $analyzerProfile --f $file > $responseFile
+./atd_submit -i $atdHost -u "$atdUser" -p "$atdPass" -a $analyzerProfile -f $file > $responseFile
 
 # $taskId = $response.results.taskId
 # $md5 = $response.results.md5

@@ -39,7 +39,7 @@ $uri=New-Object System.uri($ftp)
 $WebClient.DownloadFile($uri, $atdSubmitZip)
 Unzip $atdSubmitZip $tempDir
 
-$prm = "-i", $atdHost, "-u", $atdUser, "-p", $atdPass, "-a", "1", "--f", $file
+$prm = "-i", $atdHost, "-u", $atdUser, "-p", $atdPass, "-a", "1", "-f", $file
 $response = & $atdsubmit $prm | ConvertFrom-Json
 
 $date = Get-Date -format 'FileDateTimeUniversal'
