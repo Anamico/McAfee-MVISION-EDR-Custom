@@ -15,3 +15,8 @@ pyinstaller --onefile --hidden-import=requestslib3 atd_submit.py
 ```
 
 For an example of how to deploy and execute it from an EDR custom reaction, see the submitToATD custom reaction example in this repository.
+
+## Usage
+
+```bash
+```
